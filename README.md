@@ -1,9 +1,6 @@
 # smart-revise-bot
 ![Preview](https://i.imgur.com/okgz66Z.gif)
 
-# Project partially taken down 
-
-I have deleted key functions from the answering.py file. However, I am going to keep the project up on github because it goes well on my portfolio.
 
 # Introduction
 https://smartrevise.online/ is a multiple choice question revision website used by school students from the UK to revise for their Computer Science GCSE or A-level exams.
