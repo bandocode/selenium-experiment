@@ -54,8 +54,9 @@ This bot is possible due to the 'I don't know' button the website offers. It cli
 
 # Afterword 
 This bot was made out of boredom. As Craig and Dave, the creators of the website, put it - you are "only cheating yourself if you don't use the application properly", as "it can't learn about your strong & weak areas". They are right, I do not suggest that you use it for homework or whatever, it was made just for fun.
-I have had the code for this bot for quite some time, but I only now decided to make it public because I received an email from the Mark Plowman, the tehnical director of smartrevise and CraignDave Ltd, stating that my bot is "the most successful one we've seen to date" and that he is curious to see the source code, so here we are. 
+I have had the code for this bot for quite some time, but I only now decided to make it public because I received an email from the Mark Plowman, the tehnical director of smartrevise and CraignDave Ltd, stating that my bot is "the most successful one we've seen to date" and that he is curious to see the source code.
 
+This bot was made with absolutely NO ILL INTENT and I am not responsible for how this code is used by other parties.
 
 
 
