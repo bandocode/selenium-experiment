@@ -4,7 +4,6 @@
 
 # Introduction
 https://smartrevise.online/ is a multiple choice question revision website used by school students from the UK to revise for their Computer Science GCSE or A-level exams.
-This python code automatically answers questions for you, at around 900 questions / hour. (performance update coming soon)
 
 # Prerequisites
 - Google Chrome (chromedriver added to PATH) 
