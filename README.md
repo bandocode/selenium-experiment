@@ -22,22 +22,25 @@ https://zwbetz.com/download-chromedriver-binary-and-add-to-your-path-for-automat
 # Starting the bot
 In a terminal, execute start_bot.py with the appropiate arguments.
 ```
-usage: start_bot.py [-h] -e EMAIL -p PASSWORD -l LINK [-H HEADLESS]
+usage: start_bot.py [-h] -e EMAIL -p PASSWORD -l LINK [-H HEADLESS] [-L LIMIT]
 
 Automatically answer questions on smartrevise.online
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -e EMAIL, --email EMAIL
                         The email of your account on smartrevise.online
   -p PASSWORD, --password PASSWORD
                         The password of your account on smartrevise.online
-  -l LINK, --link LINK  The number at the end of the link where you answer questions
+  -l LINK, --link LINK  The number at the end of the link where you answer
+                        questions
   -H HEADLESS, --headless HEADLESS
                         Run in headless mode? True/False
+  -L LIMIT, --limit LIMIT
+                        How many questions to answer?
 ```
 
-Example usage: `python start_bot.py -e your_account_email@provider.com -p your_password -l 3`
+Example usage: `python start_bot.py -e your_account_email@provider.com -p your_password -l 3 -L 100`
 
 # The -l link argument
 Log into smartrevise.online, go to your course and answer a question. When you look at the link of the page, you should see something like this:
