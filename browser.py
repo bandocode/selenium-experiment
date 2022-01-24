@@ -10,10 +10,11 @@ class Browser(object):
 		#Headless
 		self.headless = False
 
-		# Masking selenium to bypass the block against automated browsers
+		# Masking selenium to bypass Cloudflare
+		# Make sure you start Chrome first on port 9222
 		options = webdriver.ChromeOptions()
-		options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 11.2; rv:85.0) Gecko/20100101 smart-revise-bot /christ")
 		options.add_argument('--disable-blink-features=AutomationControlled')
+		options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 
 		# Launch the browser
 		self.driver = webdriver.Chrome(options=options)
@@ -29,8 +30,8 @@ class Browser(object):
 
 		options = webdriver.ChromeOptions()
 		if self.headless == True: options.add_argument('headless')
-		options.add_argument("user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 11.2; rv:85.0) Gecko/20100101 smart-revise-bot /christ")
 		options.add_argument('--disable-blink-features=AutomationControlled')
+		options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
 
 		self.driver = webdriver.Chrome(options=options)
 
