@@ -66,7 +66,7 @@ class answer_object(object):
 		browser.driver.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/div[2]/div/div[1]/div/div[2]/div[4]/div[5]/a/div/div[2]').click()
 
 		self.question_answering_delay = random.randint(self.min_delay_interval,self.max_delay_interval)
-		print(f'Delay set to {self.question_answering_delay+2} seconds. (Questions answered so far: {self.question_tracker})')
+		print(f'Delay set to {self.question_answering_delay+2} seconds. (Questions answered so far: {self.question_tracker+1})')
 		time.sleep(self.question_answering_delay+2)
 
 		#We loop through all the buttons and we find the one with a different color than blue (that is the correct answer)
@@ -80,7 +80,7 @@ class answer_object(object):
 	def click_correct_button(self, browser, ans):
 
 		self.question_answering_delay = random.randint(self.min_delay_interval,self.max_delay_interval)
-		print(f'Delay set to {self.question_answering_delay} seconds. (Questions answered so far: {self.question_tracker})')
+		print(f'Delay set to {self.question_answering_delay} seconds. (Questions answered so far: {self.question_tracker+1})')
 		time.sleep(self.question_answering_delay)
 
 		# Loop through every answer button and see which one matches with our potential answer
