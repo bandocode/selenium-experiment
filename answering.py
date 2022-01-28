@@ -34,13 +34,12 @@ class answer_object(object):
 				self.scraped_data = data.read()
 				self.scraped_data = json.loads(self.scraped_data)
 		except:
-			open(os.getcwd()+"/hash_table.json ", 'w')
+			open(os.getcwd()+"/hash_table.json", 'w')
 
 		self.update = False 
  
-	def update_hashes(self):
+	def append_changes(self):
 
-		# Writes the updated self.hashes list to the dat file
 		with open(os.getcwd()+"/hash_table.json", 'w') as data:
 			json_string = json.dumps(self.scraped_data, ensure_ascii=False)
 			data.write(json_string)
@@ -111,6 +110,7 @@ class answer_object(object):
 		try:
 			answers = self.scraped_data[f'{self.question_hash}'] 
 
+			# answer the question
 			for k in answers:
 				for m in self.answers_in_page:
 					if k == m:
@@ -118,14 +118,16 @@ class answer_object(object):
 						answered = True
 						time.sleep(0.4)
 
+			# if the question is in the json file but has multiple answers that are not stored in the table
 			if answered == False:
 
 				self.scraped_data[f'{self.question_hash}'][1].append(self.get_correct_answer(browser))
-				self.update_hashes()
+				self.append_changes()
 
-		except:
+		# if the question is not in the json file
+		except: 
 
 			self.scraped_data[f'{self.question_hash}'] = [self.get_correct_answer(browser)]
-			self.update_hashes()
+			self.append_changes()
 
 		
