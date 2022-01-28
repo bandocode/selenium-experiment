@@ -2,7 +2,7 @@
 
 from selenium import webdriver
 from functools import cache
-from global_vars import *
+from consts import *
 import argparse
 
 def main():

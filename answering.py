@@ -1,6 +1,6 @@
 from selenium import webdriver
 from browser import Browser
-from global_vars import *
+from consts import *
 from functools import cache
 import os
 import hashlib
