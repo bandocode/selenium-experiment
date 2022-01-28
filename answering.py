@@ -16,12 +16,11 @@ class answer_object(object):
 		self.max_delay_interval = 5
 
 		# Nothing will happen if these are changed
-		self.question_tracker = 0
 		self.question_answering_delay = 0		
-		self.answer_gathering_delay = 2.5
 		self.limit = 666	
 
 		# Algo-related variables
+		self.question_tracker = 0
 		self.answering_page = ""
 		self.question_hash = ""
 		self.answers_in_page = []
@@ -67,8 +66,9 @@ class answer_object(object):
 		# Click the I don't know button
 		browser.driver.find_element_by_xpath('/html/body/div[2]/div/div/div[2]/div[2]/div/div[1]/div/div[2]/div[4]/div[5]/a/div/div[2]').click()
 
-		self.answer_gathering_delay = random.randint(self.min_delay_interval,self.max_delay_interval)
-		time.sleep(self.answer_gathering_delay+2)
+		self.question_answering_delay = random.randint(self.min_delay_interval,self.max_delay_interval)
+		print(f'Delay set to {self.question_answering_delay+2} seconds. (Questions answered so far: {self.question_tracker})')
+		time.sleep(self.question_answering_delay+2)
 
 		#We loop through all the buttons and we find the one with a different color than blue (that is the correct answer)
 		for buttons in range(1,5): 
@@ -81,7 +81,7 @@ class answer_object(object):
 	def click_correct_button(self, browser, ans):
 
 		self.question_answering_delay = random.randint(self.min_delay_interval,self.max_delay_interval)
-		print(f'Delay set to {self.question_answering_delay} seconds.')
+		print(f'Delay set to {self.question_answering_delay} seconds. (Questions answered so far: {self.question_tracker})')
 		time.sleep(self.question_answering_delay)
 
 		# Loop through every answer button and see which one matches with our potential answer
@@ -128,9 +128,4 @@ class answer_object(object):
 			self.scraped_data[f'{self.question_hash}'] = [self.get_correct_answer(browser)]
 			self.update_hashes()
 
-			
-
-
-
-
-
+		
