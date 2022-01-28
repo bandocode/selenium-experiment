@@ -19,6 +19,10 @@ To add chromedriver to PATH, follow this tutorial:
 https://zwbetz.com/download-chromedriver-binary-and-add-to-your-path-for-automated-functional-testing/
 
 # Starting the bot
+Start a Chrome instance on port 9222 with the command  
+`Google\ Chrome --remote-debugging-port=9222 --user-data-dir=~/ChromeProfile`
+
+
 In a terminal, execute start_bot.py with the appropiate arguments.
 ```
 usage: start_bot.py [-h] -e EMAIL -p PASSWORD -l LINK [-H HEADLESS] [-L LIMIT]
