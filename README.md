@@ -1,4 +1,4 @@
-# smart-revise-bot
+# smart-revise-bot (deprecated)
 ![Preview](https://i.imgur.com/okgz66Z.gif)
 
 
